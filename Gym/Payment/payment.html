@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape City</title>
+    <link rel="shortcut icon" href="gym_logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="payment.css"/>
+</head>
+<body>
+    <div class="wrapper">
+        <h2>Payment Form</h2>
+        <form action="" method="POST" class="form">
+            <a href="../index.html"><i class="ri-close-circle-fill exist"></i></a>
+            <!-- Account Information Start -->
+            <h4>Account</h4>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="text" placeholder="Full Name" class="name" required>
+                    <i class="ri-user-fill icon"></i>
+                </div>
+                <div class="input_box">
+                    <input type="text" placeholder="Name On Card" class="name" required>
+                    <i class="ri-user-fill icon"></i>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="email" placeholder="Email Address" class="name" required>
+                    <i class="ri-mail-fill icon"></i>
+                </div>
+            </div>
+            <!-- DOB & Gender Start -->
+            <div class="input_group">
+                <div class="input_box">
+                    <h4>Date of Birth</h4>
+                    <input type="text" placeholder="DD" class="dob" required>
+                    <input type="text" placeholder="MM" class="dob" required>
+                    <input type="text" placeholder="YYYY" class="dob" required>
+                </div>
+                <div class="input_box">
+                    <h4>Gender</h4>
+                    <input type="radio" name="gender" class="radio" id="b1" required checked>
+                    <label for="b1">Male</label>
+                    <input type="radio" name="gender" class="radio" id="b2" required checked>
+                    <label for="b2">Female</label>
+                </div>
+            </div>
+            <!-- Payment Details -->
+            <div class="input_group">
+                <div class="input_box">
+                    <h4>Payment Details</h4>
+                    <input type="radio" name="pay" class="radio" id="bc1" checked>
+                    <label for="bc1">
+                        <span><i class="ri-visa-fill"></i>Cerdit Card</span>
+                    </label>
+                    <input type="radio" name="pay" class="radio" id="bc2">
+                    <label for="bc2">
+                        <span><i class="ri-paypal-fill"></i>Paypal</span>
+                    </label>
+                </div>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <input type="tel" class="name" placeholder="Card Number 1111-2222-3333-4444" required>
+                    <i class="ri-bank-card-fill icon"></i>
+                </div>
+            </div>
+            <div class="input_box">
+                <input type="number" class="name" placeholder="Enter Amount" required>
+                <i class="ri-money-dollar-box-fill icon"></i>
+            </div>
+            <div class="input_group">
+                <div class="input_box">
+                    <button type="submit">Pay Now</button>
+                </div>
+            </div>
+        </form>
+    </div>
+</body>
+</html>

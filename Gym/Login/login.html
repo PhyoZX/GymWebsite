@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape City</title>
+    <link rel="shortcut icon" href="gym_logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+    <div class="login">
+        <img src="main.jpg" alt="login image" class="login__img">
+        <form action="" class="login_form">
+            <a href="../index.html"><i class="ri-close-circle-fill exist"></i></a>
+            <h1 class="login_title">Login</h1>
+            <div class="login_content">
+                <div class="login_box">
+                    <i class="ri-user-fill icon login_icon"></i>
+                    <div class="login_box-input">
+                        <input type="text" class="login_input" placeholder="" required>
+                        <label for="" class="login_label">Username or Email</label>
+                    </div>
+                </div>
+                <div class="login_box">
+                    <i class="ri-lock-2-line login_icon"></i>
+                    <div class="login_box-input">
+                        <input type="password" class="login_input" placeholder="" id="login_pass" required>
+                        <label for="" class="login_label">Password</label>
+                        <i class="ri-eye-off-line login_eye" id="login-eye"></i>
+                    </div>
+                </div>
+            </div>
+            <div class="login_check">
+                <div class="login_check-group">
+                    <input type="checkbox" class="login_check-input">
+                    <label for="" class="login_check-label">Remember me</label>
+                </div>
+                <a href="#" class="login_forget">Forgot Password?</a>
+            </div>
+            <button type="submit" class="login_button">Login</button>
+            <p class="login_register">
+                Don't have an account?  <a href="register.html">Register</a>
+            </p>
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

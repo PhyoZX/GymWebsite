@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shape City</title>
+    <link rel="shortcut icon" href="gym_logo.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <link rel="stylesheet" href="login.css"/>
+</head>
+<body>
+    <div class="login">
+        <img src="main.jpg" alt="login image" class="login__img">
+        <form action="" class="login_form">
+            <a href="../index.html"><i class="ri-close-circle-fill exist"></i></a>
+            <h1 class="login_title">Register Here</h1>
+            <div class="login_content">
+                <div class="login_box">
+                    <i class="ri-user-fill icon login_icon"></i>
+                    <div class="login_box-input">
+                        <input type="text" class="login_input" placeholder="" required>
+                        <label for="" class="login_label">User</label>
+                    </div>
+                </div>
+                <div class="login_box">
+                    <i class="ri-mail-fill icon icon login_icon"></i>
+                    <div class="login_box-input">
+                        <input type="email" class="login_input" placeholder="" required>
+                        <label for="" class="login_label">Email</label>
+                    </div>
+                </div>
+                <div class="login_box">
+                    <i class="ri-lock-2-line login_icon"></i>
+                    <div class="login_box-input">
+                        <input type="password" class="login_input" placeholder="" id="login_pass" required>
+                        <label for="" class="login_label">Password</label>
+                        <i class="ri-eye-off-line login_eye" id="login-eye"></i>
+                    </div>
+                </div>
+                <div class="login_box">
+                    <i class="ri-lock-2-line login_icon"></i>
+                    <div class="login_box-input">
+                        <input type="password" class="login_input" placeholder="" id="confirmLogin_pass" required>
+                        <label for="" class="login_label">Confirm Password</label>
+                        <i class="ri-eye-off-line login_eye" id="confirmLogin-eye"></i>
+                    </div>
+                </div>
+            </div>
+            <button type="submit" class="login_button">Register</button>
+           
+        </form>
+    </div>
+    <script src="login.js"></script>
+</body>
+</html>

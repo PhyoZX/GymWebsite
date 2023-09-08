@@ -1,0 +1,236 @@
+@import url('https://fonts.googleapis.com/css2?family=Kaushan+Script&family=Red+Hat+Display:wght@400;700;900&family=Stick&display=swap');
+:root{
+    --header-height: 3.5rem;
+      
+                /* Colors */
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsla(278, 76%, 55%, 0.74);
+    --first-color-light: hsl(278, 81%, 72%);
+    --first-color-alt: hsl(278, 67%, 52%);
+    --first-color-dark: hsl(278, 91%, 25%);
+    --first-color-gray: hsl(278, 6%, 64%);
+    --title-color: hsl(180, 4%, 98%);
+    --title-color-black: hsl(180, 4%, 12%);
+    --text-color: hsl(180, 4%, 72%);
+    --text-color-light: hsl(180, 4%, 65%);
+    --body-color: hsl(180, 12%, 8%);
+    
+        /* Font and typography */
+    /*5rem = 80px | 1rem = 16px */
+    --body-font: 'Red Hat Display', sans-serif;
+    --second-font: 'Kaushan Script', cursive;
+    --biggest-font-size: 2rem;
+    --bigger-font-size: 1.5rem;
+    --big-font-size: 1.25rem;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+    
+    /*Font weight */
+    --font-bold: 700;
+    --font-black: 900;
+    
+    /* z index */
+    --z-tooltip: 10;
+    --z-fixed: 100;
+    }
+/* Responsive typography */
+@media screen and (min-width: 1024px) {
+    :root {
+      --biggest-font-size: 6rem;
+      --bigger-font-size: 3.5rem;
+      --big-font-size: 2.75rem;
+      --h1-font-size: 2.25rem;
+      --h2-font-size: 1.5rem;
+      --h3-font-size: 1.25rem;
+      --normal-font-size: 1rem;
+      --small-font-size: .875rem;
+      --smaller-font-size: .813rem;
+    }
+}
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}   
+body,
+input,
+button{
+    font-family: var(--body-font);
+    font-size: var(--normal-font-size);
+    font-weight: bold;
+}
+body {
+    color: white;
+}
+input,
+button{
+    border: none;
+    outline: none;
+}
+a{
+    text-decoration: none;
+}
+img{
+    max-width: 100%;
+    height: auto;
+}
+/* login */
+.login{
+    position: relative;
+    height: 100vh;
+    display: grid;
+    align-items: center;
+}
+.login__img {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.login_form{
+    position: relative;
+    background-color: hsla(0,0%,10%,0.1);
+    border: 2px solid var(--first-color);
+    margin-inline: 1.5rem;
+    padding: 2.5rem 1.5rem;
+    border-radius: 1rem;
+    backdrop-filter: blur(8px);
+}
+.login_title{
+    text-align: center;
+    font-size: var(--h1-font-size);
+    font-weight: 500;
+    margin-bottom: 2rem;
+}
+.login_content,
+.login_box{
+    display: grid;
+}
+.login_content{
+    row-gap: 1.75rem;
+    margin-bottom: 1.5rem;
+}
+.login_box{
+    grid-template-columns: max-content 1fr;
+    align-items: center;
+    column-gap: .75rem;
+    border-bottom: 2px solid var(--first-color);
+}
+.login_icon,
+.login_eye{
+    font-size: 1.25rem;
+}
+.login_input{
+    width: 100%;
+    padding-block: 0.8rem;
+    background: none;
+    color: var(--first-color-dark);
+    position: relative;
+    z-index: 1;
+}
+.login_box-input{
+    position: relative;
+}
+.login_label{
+    position: absolute;
+    left: 0;
+    top: 13px;
+    font-weight: 500;
+    transition: top .3s, var(--normal-font-size) .3s;
+}
+.login_eye{
+    position: absolute;
+    right: 0;
+    top: 18px;
+    z-index: 10;
+    cursor: pointer;
+}
+.login_box:nth-child(2) input{
+    padding-right: 1.8rem;
+}
+.login_check,
+.login_check-group{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.login__check {
+    margin-bottom: 1.5rem;
+}
+.login_check-label,
+.login_forget,
+.login_register{
+    font-size: var(--small-font-size);
+}
+.login_check-group{
+    column-gap: .5rem;
+}
+.login_check-input{
+    width: 16px;
+    height: 16px;
+}
+.login_forget{
+    color: hsl(0, 0%, 100%);
+}
+.login_forget:hover{
+    text-decoration: underline;
+}
+.login_button{
+    width: 100%;
+    margin-top: .5rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: hsl(0, 0%, 100%);
+    font-weight: 500;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+.login_button:hover{
+    background-color: var(--first-color);
+}
+.login_register{
+    text-align: center;
+}
+.login_register a{
+    color: hsl(0, 0%, 100%);
+    font-weight: 500;
+}
+.login_register a:hover{
+    text-decoration: underline;
+}
+/* input focus move up label */
+.login_input:focus + .login_label{
+    top: -12px;
+    font-size: var(--small-font-size);
+}
+/* input foxus sticky top label */
+.login_input:not(:placeholder-shown).login_input:not(:focus) + .login_label{
+    top: -12px;
+    font-size: var(--small-font-size);
+}
+.exist{
+    position: fixed;
+    right: -13px;
+    top: -15px;
+    font-size: 2rem;
+    cursor: pointer;
+}
+/* For medium devices */
+@media screen and (min-width: 768px){
+    .login{
+        justify-content: center;
+    }
+    .login_form{
+        width: 400px;
+        padding: 4rem 3rem 3.5rem;
+        border-radius: 1.5rem;
+    }
+    .login_title{
+        font-size: 2rem;
+    }
+}
